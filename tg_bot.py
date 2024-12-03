@@ -2,14 +2,11 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
-# Вставьте сюда ваш API токен
 TOKEN = '7905134738:AAEE9KeyfAERLVHEqD1PssR4Rp1RjHHJQUc'
 
-# Настройка логирования
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Словарь с часто задаваемыми вопросами и ответами
 FAQ = {
     'Как зарегистрироваться в системе?': '➡️ Перейти на страницу регистрации.\n➡️ Заполнить форму с указанием имени, email и других необходимых данных.\n➡️ Установить пароль.\n➡️ Нажать на кнопку "Зарегистрироваться".\n➡️ После этого на указанный email придет письмо с подтверждением.',
     'Как войти в систему?': '➡️ Перейдите на страницу входа.\n➡️ Введите email и пароль.\n➡️ Если не помните пароль, воспользуйтесь функцией восстановления.',
